@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevUnion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+
+<body>
+    <div class="loading-screen">
+        <div class="loading-content">
+            <h1 class="loader-logo">DevUnion</h1>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="canvas-container"></div>
+
+
+    <header>
+        <a href="#" class="logo"><img src="DevUnion.webp" alt="DevUnion Logo" style="height: 40px;"></a>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#games">Games</a>
+            
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="theme-selector">
+            <select id="theme-selector">
+                <option value="light">Light Mode</option>
+                <option value="dark">Dark Mode</option>
+                <option value="night">Night Mode</option>
+            </select>
+        </div>
+        <div class="language-selector">
+            <button id="language-toggle" class="lang-btn">
+                <span class="lang-text">عربي</span>
+            </button>
+        </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="home-content">
+            <h1><span data-translate="welcome">Welcome to</span> <span class="highlight">DevUnion</span></h1>
+            <h2 class="typing-text"></h2>
+            <p data-translate="aboutText1">We are a passionate team dedicated to creating legendary web experiences and
+                exciting games through innovative solutions.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn primary-btn" data-translate="getInTouch">Get In Touch</a>
+                <a href="#" class="btn secondary-btn" data-translate="learnMore">Learn More</a>
+            </div>
+            <div class="social-icons">
+                
+                <a href="https://instagram.com/dev.union" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="home-3d-element">
+            <div id="home-character-canvas"></div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="section-header">
+            <h2 data-translate="aboutTitle">About DevUnion</h2>
+        </div>
+        <div class="about-container">
+            <div class="about-image">
+                <div class="image-3d-container">
+                    <img src="DevUnion.webp" alt="">
+                </div>
+                
+            </div>
+            <div class="about-content">
+                <h3 data-translate="webDevExperts">Web Development & Game Development Experts</h3>
+                <p data-translate="aboutText1">We are a dedicated team of web and game development enthusiasts
+                    specializing in creating seamless digital experiences and captivating games. With expertise in both
+                    front-end/back-end technologies and game design, we craft solutions that blend aesthetics with
+                    functionality.</p>
+                <p data-translate="aboutText2">Our journey began with a shared passion for web and gaming technologies,
+                    and we've grown into a team focused on delivering innovative solutions for complex challenges in the
+                    digital and gaming space.</p>
+                <div class="personal-info">
+                    <div class="info-item">
+                        <span class="info-title" data-translate="team">Team:</span>
+                        <span class="info-value">DevUnion</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-title" data-translate="location">Location:</span>
+                        <span class="info-value">Remote</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-title" data-translate="email">Email:</span>
+                        <span class="info-value">devunion8@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-title" data-translate="availability">Availability:</span>
+                        <span class="info-value" data-translate="openForProjects">Open for projects</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-header">
+            <h2 data-translate="technicalSkills">Technical Skills</h2>
+        </div>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3 data-translate="frontEndDev">Front-End Development</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                        <div class="skill-info">
+                            <h4>HTML5</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                        <div class="skill-info">
+                            <h4>CSS3</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-js"></i></div>
+                        <div class="skill-info">
+                            <h4>JavaScript</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-react"></i></div>
+                        <div class="skill-info">
+                            <h4>React.js</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Back-End Development</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+                        <div class="skill-info">
+                            <h4>Node.js</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-php"></i></div>
+                        <div class="skill-info">
+                            <h4>PHP</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-python"></i></div>
+                        <div class="skill-info">
+                            <h4>Python</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 65%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-database"></i></div>
+                        <div class="skill-info">
+                            <h4>Database Management</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Game Development</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-gamepad"></i></div>
+                        <div class="skill-info">
+                            <h4>Unity</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <div class="skill-info">
+                            <h4>godot</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-paint-brush"></i></div>
+                        <div class="skill-info">
+                            <h4>2D/3D Art</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-header">
+            <h2 data-translate="featuredProjects">Featured Projects</h2>
+        </div>
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all" data-translate="all">All</button>
+            <button class="filter-btn" data-filter="web" data-translate="webDevelopment">Web Development</button>
+            <button class="filter-btn" data-filter="apps" data-translate="applications">Applications</button>
+        </div>
+        <div class="projects-container">
+            <div class="project-card" data-category="web">
+                <div class="project-3d-wrapper">
+                    <div class="project-image">
+                        <img src="school.png" alt="E-commerce Platform">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-translate="ecommerceTitle">A complete school system website</h3>
+                        <p data-translate="ecommerceDesc">a platform that distinguishes the school from others and makes
+                            it advanced, allowing students to take exams and follow up with teachers.</p>
+                        <div class="project-tech">
+                            <span data-translate="JavaScript">JavaScript</span>
+                            <span data-translate="html5">html5</span>
+                            <span data-translate="css">css</span>
+                            <span data-translate="php">php</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <section id="games">
+        <div class="section-header">
+            <h2 data-translate="featuredGames">Featured Games</h2>
+        </div>
+        <div class="games-container">
+            <div class="game-card">
+                <div class="game-3d-wrapper">
+                    <div class="game-image">
+                        <img src="luna.png" alt="Luna Adventure">
+                    </div>
+                    <div class="game-content">
+                        <h3 data-translate="lunaGameTitle">Luna: Magical Adventure</h3>
+                        <p data-translate="lunaGameDesc">A 2D adventure game with a magical world full of challenges and
+                            quests.</p>
+                        <div class="game-tech">
+                            <span data-translate="unity">godot</span>
+                            
+                            <span data-translate="art2d">2D Art</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="game-card">
+                <div class="game-3d-wrapper">
+                    <div class="game-image">
+                        <img src="stod.png" alt="Shadow Realm">
+                    </div>
+                    <div class="game-content">
+                        <h3 data-translate="S.T.O.D">S.T.O.D</h3>
+                        <p data-translate="shadowRealmDesc">In just two days, one of our team members managed to develop
+                            a simple 3D game using the Unity engine, inspired by the popular game Only Up! 🎮🔥
+                            Using POLY-style graphics.</p>
+                        <div class="game-tech">
+                            <span data-translate="Unity">Unity</span>
+                            <span data-translate="c#">c#</span>
+                            <span data-translate="art3d">3D Art</span>
+                        </div>
+                        <div class="game-links">
+                            <a href="https://7moda1.itch.io/stod?fbclid=PAZXh0bgNhZW0CMTEAAacwum9BP28l95fiY5Nl3CkjOOvksSLsHrs8glwFJTGH9kt0BsiTwbyvok-gBg_aem_BLd6ev5-aHKH1yRXnz75hw" class="game-btn" data-translate="download">Download</a>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section id="contact">
+        <div class="section-header">
+            <h2 data-translate="getInTouch">Get In Touch</h2>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3 data-translate="letsConnect">Let's Connect</h3>
+                <p data-translate="connectText">We are always open to discussing new projects, creative ideas, or
+                    opportunities to be part of your vision in web or game development.</p>
+                <div class="info-items">
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info-content">
+                            <h4 data-translate="location">Location</h4>
+                            <p>Remote</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="info-content">
+                            <h4 data-translate="email">Email</h4>
+                            <p>info@devunion.fun</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="info-content">
+                            <h4 data-translate="whatsapp">whatsapp</h4>
+                            <p>+962 7 8201 4263</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <h4 data-translate="findUsOn">Find us on</h4>
+                    <div class="social-icons">
+                    
+                        <a href="https://instagram.com/dev.union" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-container">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder=" " required>
+                        <label for="name" data-translate="yourName">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder=" " required>
+                        <label for="email" data-translate="yourEmail">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" placeholder=" " required>
+                        <label for="subject" data-translate="subject">Subject</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder=" " required></textarea>
+                        <label for="message" data-translate="yourMessage">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn primary-btn" data-translate="sendMessage">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>DevUnion</h3>
+                <p>Web & Game Development Experts</p>
+            </div>
+            <div class="footer-links">
+                <h4 data-translate="quickLinks">Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#games">Games</a></li>
+                    
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4 data-translate="stayUpdated">Stay Updated</h4>
+                <p data-translate="newsletterText">Subscribe to our newsletter for the latest articles and game
+                    releases.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required data-translate-placeholder="enterEmail">
+                    <button type="submit" class="newsletter-btn" data-translate="subscribe">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 DevUnion. <span data-translate="rightsReserved">All Rights Reserved.</span></p>
+            <p><span data-translate="designedWith">Designed with</span> <i class="fas fa-heart"></i> <span
+                    data-translate="by">by</span> DevUnion</p>
+        </div>
+    </footer>
+
+    <div class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
